@@ -1,0 +1,126 @@
+
+Be very Curious about every small things
+
+const heading = React.createElement( ' h1 ' , { id: ' heading ' } , ' from React text ' )
+
+ //Here is does not creates an H1 tag directly it creates an Object
+
+const root = ReactDOM.createRoot(document.getElementById('root'))
+root.render(heading) 
+
+//When the above object is passed over here then this render methods job is to take that object and make it as an h1 tag
+
+Never Thing that when you do React.createElement it will create an HTML → It will create an Object and that object will be converted to HTML through the renderer by ReactDOM
+
+To solve the problem of writing numerous amount of time React.createElement we will be using JSX
+
+React can work anywhere u can easily import it anywhere and use it even only on a particular div also
+
+
+
+
+Q ) Why there are 2 files to import react (react and react-dom) why that is not in a single file ?
+→ React and ReactDOM are split into two separate libraries to achieve modularity and flexibility, each serving distinct purposes.
+
+React:
+
+Core Library: React focuses on creating and managing components, state, and props. It provides the tools necessary to define the user interface and component lifecycle.
+
+Platform Agnostic: React is designed to be platform-agnostic, meaning it doesn't assume anything about the environment in which it will be used. This allows React to be used in various contexts, such as web, mobile (via React Native), and even virtual reality, even in 3D by using React 3 Fiber.
+
+
+ReactDOM:
+
+DOM-Specific Rendering: ReactDOM is responsible for interacting with the actual DOM in web browsers. It provides methods to render React components to the DOM and manage updates.
+Web-Specific: ReactDOM includes all the logic required to work with the DOM, which is specific to web applications.
+
+
+
+
+Q ) What is CDN?
+→ A Content Delivery Network (CDN) is a network of interconnected servers that speeds up webpage loading.
+When a user visits a website, data from that website’s server has to travel across the internet to reach the user’s computer. A CDN works by caching content at multiple locations around the world, so that when a user requests content, the CDN can deliver it from the location closest to the user. This reduces the distance the data has to travel, resulting in faster page loads and improved user experience.
+
+
+
+Q ) What is React? Why is React known as ‘React’? 
+→ React is a JavaScript Library which is used for simplify building user interfaces, particularly for single-page applications.The name ‘React’ was chosen because the library was designed to allow developers to react to changes in state and data within an application, and to update the user interface in a declarative and efficient manner. 
+
+
+
+Q ) What is a Single Page Application ?
+→ The SPA is a web app implementation that only loads a single document and updates that document in specific parts only. Instead of loading every time when the user interacts it - This is old way of doing it
+
+
+
+Q ) What is a Library ?
+→ Library is the collection of prewritten code snippets that is used to perform a specific tasks .
+
+When you use a library, you are in charge of the flow of the application. You are choosing when and where to call the library
+
+Eg. A library is like going to Ikea. You already have a home, but you need a bit of help with furniture. You don’t feel like making your own table from scratch. Ikea allows you to pick and choose different things to go in your home. You are in control.
+
+Eg. jQuery , React
+
+
+
+Q ) What is a Framework?
+→ Framework provides a basic foundation or structure for a website or an application. 
+
+When you use a framework, the framework is in charge of the flow. It provides some places for you to plug in your code, but it calls the code you plugged in as needed.
+
+Eg. A framework, on the other hand, is like building a model home. You have a set of blueprints and a few limited choices when it comes to architecture and design. Ultimately, the contractor and blueprint are in control. And they will let you know when and where you can provide your input.
+Eg. Angular, Vue
+
+
+
+Q )  What is Emmet?
+→ Emmet is the essential toolkit for web-developers. It allows you to type shortcuts that are then expanded into full-fledged boiler plate code for writing HTML and CSS.
+Eg. `.test` will give me    <div class="test"></div>
+
+
+
+Q )  What is crossorigin in script tag?
+→ The crossorigin attribute in the script tag enables CrossOrigin Resource Sharing (CORS) for loading external JavaScript files from different origin than the hosting web page. This allows the script to access resources from the server hosting the script, such as making HTTP requests or accessing data.
+Types of CrossOrigin Attribute Value
+
+crossorigin="anonymous" or crossorigin=" " or nothing only crossorigin
+→  This value indicates that the script should be fetched without credentials (like cookies, HTTP authentication, or client-side SSL certificates).
+
+crossorigin="use-credentials"
+→ This value indicates that the script should be fetched with credentials.
+
+
+
+Q )  What is difference between React and ReactDOM 
+→ React:
+Let’s create reusable pieces of UI called components.
+Helps you build user interfaces (UIs) in JavaScript.
+Makes it easy to update and show UI changes based on data.
+
+ React DOM:
+Specifically deals with showing React components on web pages.
+Without ReactDOM, React wouldn’t know how to display things on a web page.
+Take care of connecting your React code to the actual HTML on a webpage.
+
+
+
+Q )  What is the difference between react.development.js and react.production.js files via CDN? 
+→ In development mode, we can enable and utilize React developer tools, devtools profiler, debugging environment attached with source code.so here the size will be more as compared to production mode
+
+
+
+Q ) What is async and defer?
+→ The async and defer attributes are used with the <script> tag in HTML to control how scripts are loaded and executed.
+
+Execution Timing:
+async: Executes as soon as the script is downloaded, which can be before or after the document is parsed.
+defer: Executes only after the document has been fully parsed.
+
+Execution Order:
+async: No guarantee of execution order.
+defer: Executes in the order the scripts appear in the document.
+
+Use Cases:
+async: Suitable for scripts that are independent and don’t rely on the DOM or other scripts. Examples include analytics scripts or ads.
+defer: Suitable for scripts that need the full DOM to be available or depend on other scripts. Examples include large JavaScript libraries or application logic that manipulates the DOM.
